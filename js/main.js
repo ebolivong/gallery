@@ -9,8 +9,14 @@ $('.galimg').each(function() {
 	console.log($ (this).css('height') );
 
 	var width = $(this).width();
-	$(this).height(width)
+	var height = $(this).height(width);
 
+			if (width > height) {
+	$('.galimg').addClass('.landscape');
+}
+
+	if (height > width) {
+	$('.galimg').addClass('.portrait');
+}
 });
-
 
