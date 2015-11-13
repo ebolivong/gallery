@@ -10,13 +10,16 @@ $('.galimg').each(function() {
 
 	var width = $(this).width();
 	var height = $(this).height(width);
+	var currentimg = $("img")
 
-			if (width > height) {
-	$('.galimg').addClass('.landscape');
-}
 
-	if (height > width) {
-	$('.galimg').addClass('.portrait');
-}
+		if (currentimg.width > currentimg.height) {
+		currentimg.addClass('.landscape');
+	}
+
+		else {
+		currentimg.addClass('.portrait');
+	}
+
 });
 
